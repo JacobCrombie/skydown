@@ -1,12 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <nav-bar />
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import NavBar from "@/components/NavBar.vue";
+export default {
+  components: {
+    "nav-bar": NavBar,
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -18,14 +26,12 @@
 }
 
 #nav {
-  padding: 30px;
-
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #ea7936;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #ea9c36;
     }
   }
 }
